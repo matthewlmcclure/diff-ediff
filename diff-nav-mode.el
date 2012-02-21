@@ -5,7 +5,6 @@
   nil)
 
 (define-key diff-nav-mode-map "\C-c\C-e" 'diff-nav-do-ediff)
-(define-key diff-nav-mode-map "\C-m" 'diff-nav-do-ediff)
 
 (defun diff-nav-do-ediff ()
   (interactive)
