@@ -1,4 +1,4 @@
-;;; diff-ediff-mode.el --- navigate diff files with Ediff
+;;; diff-ediff.el --- navigate diff files with Ediff
 
 ;; Copyright (C) 2012 Matt McClure
 
@@ -54,7 +54,7 @@
 ;;
 ;; The above assumes you've added to your Emacs startup file:
 ;;
-;;    (load "/path/to/diff-ediff-mode.el")
+;;    (load "/path/to/diff-ediff.el")
 
 ;;; Code:
 
