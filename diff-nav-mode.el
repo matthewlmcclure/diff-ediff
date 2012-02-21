@@ -20,9 +20,12 @@
 
 (defun diff-nav-do-ediff ()
   (interactive)
-  (message "called diff-nav-do-ediff")
-  (let ((files (diff-hunk-file-names)))
-    (ediff-buffers (get-file-buffer (cadr files)) (get-file-buffer (car files))))
+  (let* ((files (diff-hunk-file-names))
+         (file-A (cadr files))
+         (file-B (car files))
+         (buf-A (or (get-file-buffer file-A) (find-file-noselect file-A)))
+         (buf-B (or (get-file-buffer file-B) (find-file-noselect file-B))))
+    (ediff-buffers buf-A buf-B))
   )
 
 (defun parse-diff-command-line (line)
