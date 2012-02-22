@@ -7,4 +7,9 @@ REMOTE="$2"
 BASE="$3"
 MERGED="$4"
 
-emacs --eval="(ediff-merge-files-with-ancestor \"$LOCAL\" \"$REMOTE\" \"$BASE\" nil \"$MERGED\")"
+if [ -f "$BASE" ]
+then
+    emacs --eval="(ediff-merge-files-with-ancestor \"$LOCAL\" \"$REMOTE\" \"$BASE\" nil \"$MERGED\")"
+else
+    emacs --eval="(ediff-merge-files \"$LOCAL\" \"$REMOTE\" nil \"$MERGED\")"
+fi
