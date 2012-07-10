@@ -79,4 +79,4 @@
 (add-to-list 'auto-mode-alist '("\\.\\(diffs?\\|patch\\|rej\\)\\'" . diff-ediff-mode))
 (add-to-list 'auto-mode-alist '("\\.\\(dif\\|pat\\)\\'" . diff-ediff-mode))
 
-(provide 'diff-ediff-mode)
+(provide 'diff-ediff)
